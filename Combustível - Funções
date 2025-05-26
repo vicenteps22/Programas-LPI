@@ -1,0 +1,65 @@
+/* Qual combustível usar? - Parte 2 */
+
+#include <stdio.h>
+
+float custo(float eficiencia, float preco){
+    float custo = preco/eficiencia;
+    return custo;
+}
+
+void melhorOpcao(int opcaoGNV, float etanol, float gasolina, float gnv){
+    printf("Custo do etanol por km: R$%.2f\n", etanol);
+    printf("Custo da gasolina por km: R$%.2f\n", gasolina);
+    if(opcaoGNV == 0){
+        printf("Custo do GNV por km: R$%.2f\n", gnv);
+    }
+    printf("Escolha ");
+    if(etanol < gasolina && etanol < gnv){
+        printf("etanol\n");
+    } else if(gasolina < etanol && gasolina < gnv){
+        printf("gasolina\n");
+    } else if (gnv < gasolina && gnv < etanol){
+        printf("GNV\n");
+    }
+}
+
+int main(){
+    
+    float eficienciaEtanol, precoEtanol, custoEtanol;
+
+    // Entrada da eficiência média e preço do etanol 
+    printf("Qual a eficiência média do etanol no seu carro em km/l? ");
+    scanf("%f", &eficienciaEtanol);
+    printf("Qual o preço do etanol? ");
+    scanf("%f", &precoEtanol);
+    custoEtanol = custo(eficienciaEtanol, precoEtanol);
+    
+    float eficienciaGasolina, precoGasolina, custoGasolina;
+    
+    // Entrada da eficiência média e preço da Gasolina
+    printf("Qual a eficiência média da gasolina no seu carro em km/l? ");
+    scanf("%f", &eficienciaGasolina);
+    printf("Qual o preço da gasolina? ");
+    scanf("%f", &precoGasolina);
+    custoGasolina = custo(eficienciaGasolina, precoGasolina);
+    
+    int opcaoGNV;
+    float eficienciaGNV, precoGNV, custoGNV = 10000;
+    
+    // Entrada da eficiência média e do valor do GNV caso o usuário utilize 
+    printf("Seu carro possui GNV? Digite 0 para sim e 1 para não ");
+    scanf("%i", &opcaoGNV);
+    if (opcaoGNV == 0){
+        printf("Qual a eficiência média do GNV no seu carro em km/m³? ");
+        scanf("%f", &eficienciaGNV);
+        printf("Qual o preço do GNV? ");
+        scanf("%f", &precoGNV);
+        custoGNV = custo(eficienciaGNV, precoGNV);
+    }
+    
+    // Chama a função que compara os valores dos custos dos combustíveis
+    melhorOpcao(opcaoGNV, custoEtanol, custoGasolina, custoGNV);
+    
+    return 0;
+    
+}
