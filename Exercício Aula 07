@@ -1,0 +1,79 @@
+/******************************************************************************
+
+Excercício Aula 07
+
+*******************************************************************************/
+#include <stdio.h>
+#include <limits.h>
+#include <float.h>
+
+int main()
+{
+    // Alocação em bytes e limites máximos e mínimos para alocação de valores do tipo signed char
+    printf("Tipo signed char\n");
+    printf("Number of bytes: %ld\n", sizeof(signed char));
+    printf("SCHAR_MAX: %d\n", SCHAR_MAX);
+    printf("SCHAR_MIN: %d\n", SCHAR_MIN);
+    
+    // Alocação em bytes e limites máximos e mínimos para alocação de valores do tipo unsigned char
+    printf("\nTipo unsigned char\n");
+    printf("Number of bytes: %ld\n", sizeof(unsigned char));
+    printf("UCHAR_MAX: %d\n", UCHAR_MAX);
+    printf("UCHAR_MIN: %d\n", UCHAR_MAX + 1);
+    
+    // Alocação em bytes e limites máximos e mínimos para alocação de valores do tipo char
+    printf("\nTipo char\n");
+    printf("Number of bytes: %ld\n", sizeof(char));
+    printf("CHAR_MAX: %d\n", CHAR_MAX);
+    printf("CHAR_MIN: %d\n", CHAR_MIN);
+    
+    // Alocação em bytes e limites máximos e mínimos para alocação de valores do tipo short int
+    printf("\nTipo short int\n");
+    printf("Number of bytes: %ld\n", sizeof(short int));
+    printf("SHRT_MAX: %d\n", SHRT_MAX);
+    printf("SHRT_MIN: %d\n", SHRT_MIN);
+    
+    // Alocação em bytes e limites máximos e mínimos para alocação de valores do tipo int
+    printf("\nTipo int\n");
+    printf("Number of bytes: %ld\n", sizeof(int));
+    printf("INT_MAX: %d\n", INT_MAX);
+    printf("INT_MIN: %d\n", INT_MIN);
+    
+    // Alocação em bytes e limites máximos e mínimos para alocação de valores do tipo unsigned int
+    printf("\nTipo unsigned int\n");
+    printf("Number of bytes: %ld\n", sizeof(unsigned int));
+    printf("UINT_MAX: %u\n", UINT_MAX);
+    printf("UINT_MIN: %u\n", UINT_MAX + 1);
+    
+    // Alocação em bytes e limites máximos e mínimos para alocação de valores do tipo long int
+    printf("\nTipo long int\n");
+    printf("Number of bytes: %ld\n", sizeof(long int));
+    printf("LONG_MAX: %ld\n", LONG_MAX);
+    printf("LONG_MIN: %ld\n", LONG_MIN);
+    
+    // Alocação em bytes e limites máximos e mínimos para alocação de valores do tipo unsigned long int
+    printf("\nTipo unsigned long int\n");
+    printf("Number of bytes: %ld\n", sizeof(unsigned long int));
+    printf("ULONG_MAX: %lu\n", ULONG_MAX);
+    printf("ULONG_MIN: %lu\n", ULONG_MAX + 1);
+    
+    // Alocação em bytes e limites máximos e mínimos para alocação de valores do tipo float
+    printf("\nTipo float\n");
+    printf("Number of bytes: %lu\n", sizeof(float));
+    printf("FLT_MAX: %e\n", FLT_MAX);
+    printf("FLT_MIN: %e\n", FLT_MIN);
+    
+    // Alocação em bytes e limites máximos e mínimos para alocação de valores do tipo double
+    printf("\nTipo double\n");
+    printf("Number of bytes: %lu\n", sizeof(double));
+    printf("DBL_MAX: %e\n", DBL_MAX);
+    printf("DBL_MIN: %e\n", DBL_MIN);
+    
+    // Alocação em bytes e limites máximos e mínimos para alocação de valores do tipo long double
+    printf("\nTipo long double\n");
+    printf("Number of bytes: %ld\n", sizeof(long double));
+    printf("LDBL_MAX: %Le\n", LDBL_MAX);
+    printf("LDBL_MIN: %Le\n", LDBL_MIN);
+    
+    return 0;
+}
